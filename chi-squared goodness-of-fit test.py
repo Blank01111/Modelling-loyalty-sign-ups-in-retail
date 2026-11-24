@@ -1,0 +1,67 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import scipy.stats as stats
+
+sign_ups = pd.read_csv("Spreadsheet of loyalty signups.csv")
+
+observed = [float(0) + float(6), float(10), float(13),float(7), float(6), float(4) + float(2) + float(2) + float(0)]
+a = 50 * stats.poisson.pmf(0, 3.54)
+b = 50 * stats.poisson.pmf(1, 3.54)
+c = 50 * stats.poisson.pmf(2, 3.54)
+d = 50 * stats.poisson.pmf(3, 3.54)
+e = 50 * stats.poisson.pmf(4, 3.54)
+f = 50 * stats.poisson.pmf(5, 3.54)
+g = 50 * stats.poisson.pmf(6, 3.54)
+h = 50 * stats.poisson.pmf(7, 3.54)
+i = 50 * stats.poisson.pmf(8, 3.54)
+j = 50*(1- stats.poisson.cdf(8, 3.54))
+expected = [a + b,c,d,e,f,g + h + i + j]
+test_statistic, pval = stats.chisquare(observed, expected, 1)
+print(test_statistic)
+print(pval)
+observed = [17,16,15,17,15,15,8,10,7,7,6,6, 4 + 7,2 + 3,1 + 3 + 3,1 + 2 + 3 + 2,0 + 0 + 1 + 1 + 1 + 1 + 0+0+0+1+0+0+1+1+ 0]
+a = 177 * stats.geom.pmf(1, 177/1480)
+b = 177 * stats.geom.pmf(2, 177/1480)
+c = 177 * stats.geom.pmf(3, 177/1480)
+d = 177 * stats.geom.pmf(4, 177/1480)
+e = 177 * stats.geom.pmf(5, 177/1480)
+f = 177 * stats.geom.pmf(6, 177/1480)
+g = 177 * stats.geom.pmf(7, 177/1480)
+h = 177 * stats.geom.pmf(8, 177/1480)
+i = 177 * stats.geom.pmf(9, 177/1480)
+j = 177 * stats.geom.pmf(10, 177/1480)
+k = 177 * stats.geom.pmf(11, 177/1480)
+l = 177 * stats.geom.pmf(12, 177/1480)
+m = 177 * stats.geom.pmf(13, 177/1480)
+n = 177 * stats.geom.pmf(14, 177/1480)
+o = 177 * stats.geom.pmf(15, 177/1480)
+p = 177 * stats.geom.pmf(16, 177/1480)
+q = 177 * stats.geom.pmf(17, 177/1480)
+r = 177 * stats.geom.pmf(18, 177/1480)
+s = 177 * stats.geom.pmf(19, 177/1480)
+t = 177 * stats.geom.pmf(20, 177/1480)
+u = 177 * stats.geom.pmf(21, 177/1480)
+v = 177 * stats.geom.pmf(22, 177/1480)
+w = 177 * stats.geom.pmf(23, 177/1480)
+x = 177 * stats.geom.pmf(24, 177/1480)
+y = 177 * stats.geom.pmf(25, 177/1480)
+z = 177 * stats.geom.pmf(26, 177/1480)
+a1 = 177 * stats.geom.pmf(27, 177/1480)
+b1 = 177 * stats.geom.pmf(28, 177/1480)
+c1 = 177 * stats.geom.pmf(29, 177/1480)
+d1 = 177 * stats.geom.pmf(30, 177/1480)
+e1 = 177 * stats.geom.pmf(31, 177/1480)
+f1 = 177 * stats.geom.pmf(32, 177/1480)
+g1 = 177 * stats.geom.pmf(33, 177/1480)
+h1 = 177 * stats.geom.pmf(34, 177/1480)
+i1 = 177 * stats.geom.pmf(35, 177/1480)
+j1 = 177 * stats.geom.pmf(36, 177/1480)
+k1 = 177 * stats.geom.pmf(37, 177/1480)
+l1 = 177 * (1 - stats.geom.cdf(37, 177/1480))
+expected = [a,b,c,d,e,f,g,h,i,j,k,l,m+n,o+p,q+r+s,t+u+v+w,x+y+z+a1+b1+c1+d1+e1+f1+g1+h1+i1+j1+k1+l1]
+test_statistic, pval = stats.chisquare(observed, expected, 1)
+print(test_statistic)
+print(pval)
+
