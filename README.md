@@ -28,3 +28,15 @@ We define the statistical values for this analysis:
 
 I work two lengths of shifts. The first length is 4 hours. A histogram for the number of loyalty cards handed out in 37 of these shifts is shown below: $\mu_1 \approx 3.65$, $\sigma^{2}_1 \approx 3.74$, $\sigma_1 \approx 1.93$$, $M_1 = 3.0$, and $R_1 = 3.0$. This bar chart is not symmetric. Values seem to cluster around $2$ and $3$ with a few higher values. This chart is thus right skewed. With a small standard deviation and small interquartile range this dataset is not spread out very much. This dataset is relatively large with $37$ shifts recorded.
 
+<img width="757" height="570" alt="Screenshot From 2026-11-25 14-14-38" src="https://github.com/user-attachments/assets/d1c090a1-6b02-48e0-a56f-aa4098bd11dd" />
+
+<img width="757" height="570" alt="Screenshot From 2026-11-25 14-15-26" src="https://github.com/user-attachments/assets/94c7f274-3f21-4fce-9777-51270b53a653" />
+
+<img width="757" height="570" alt="Screenshot From 2026-11-25 14-16-17" src="https://github.com/user-attachments/assets/1d49dafe-ee3a-414a-84f9-e1b2c7fe10bc" />
+
+I also work 5.5 hour shifts. A bar plot for the number of loyalty cards handed out in 13 of these shifts is shown below: $\mu_2 \approx 3.23$, $\sigma^{2}_2 \approx 2.18$, $\sigma_2 ≈ 1.48$,  $M_2 = 3.0$, and $R_2 = 2.0$. This bar chart is very symmetric with one value of $6$ breaking this pattern a little bit. The standard deviation and interquartile range for this shift is smaller than the four-hour shifts. This suggests the number of loyalty sign-ups is less variable for this shift. It is worth mentioning though this dataset is a lot smaller with $13$ shifts recorded. The bar chart for both shifts is shown below: $\mu_3 \approx 3.54$, $\sigma^{2}_3 \approx 3.37$, $\sigma_3 \approx 1.84$, $M_3 = 3.0$, and $R_3 = 3.0$. From this chart it seems to follow a Poisson distribution well as it follows the shape of this sort of distribution. The Poisson distribution will be discussed shortly.
+
+<img width="757" height="570" alt="Screenshot From 2026-11-25 14-31-01" src="https://github.com/user-attachments/assets/410dd545-dbff-4164-b6b4-89b163331226" />
+
+Moving on to waiting times the histogram for this is shown below for 177 data
+values: $\mu_4 \approx 8.36$, $\sigma^{2}_4 \approx 51.43$, $\sigma \approx 7.17$, $M_4 = 6.0$, and $R_4 = 8.0$. This histogram has a single mode at (approximately) the $1$ to $5$ bin. It can be argued that this is bimodal with the second mode being at (approximately) the $18$ to $22$ bin. This histogram has a decreasing trend which suggests fitting it to a geometric distribution would be a good idea. This will also be discussed shortly.
