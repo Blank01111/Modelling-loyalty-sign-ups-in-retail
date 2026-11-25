@@ -18,5 +18,13 @@ Over 50 work shifts spacing over 6 months I recorded the amount of loyalty sign 
 * The way I asked each customer was more or less exactly the same through-out.
 
 We define the statistical values for this analysis:
-* Let the mean be $\mu_i$ where $i = 1, 2, 3, 4$ for the 4 bits of analysis I looked
-at.
+* Let the mean be $\mu_i$ where $i = 1, 2, 3, 4$ for the $4$ bits of analysis I looked at.
+* Let the variance be $\sigma^{2}_i$.
+* Let the standard deviation be $\sigma_i$.
+* Let $M_i$ be the median.
+* Let $R_i$ be the interquartile range.
+
+### Plots and statistical values from the data
+
+I work two lengths of shifts. The first length is 4 hours. A histogram for the number of loyalty cards handed out in 37 of these shifts is shown below: $\mu_1 \approx 3.65$, $\sigma^{2}_1 \approx 3.74$, $\sigma_1 \approx 1.93$$, $M_1 = 3.0$, and $R_1 = 3.0$. This bar chart is not symmetric. Values seem to cluster around $2$ and $3$ with a few higher values. This chart is thus right skewed. With a small standard deviation and small interquartile range this dataset is not spread out very much. This dataset is relatively large with $37$ shifts recorded.
+
