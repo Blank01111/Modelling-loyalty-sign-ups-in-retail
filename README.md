@@ -60,10 +60,29 @@ Finally for the last assumption since I can only serve one customer at a time I 
 
 So assumptions $1$, $2$, and $4$ seem to be met but not $3$. We will ignore this for the time being.
 
-The Poisson distribution is written as $Y \sim Poisson(t\lambda)$ and it has probability mass function (pmf):
+The Poisson distribution is written as $Y \sim Poisson(\lambda)$ and it has probability mass function (p.m.f):
+
+$$
+p(x) = \frac{e^{\lambda}(\lambda)^{x}}{x!}
+$$
+
+The variable x takes values $0, 1, 2, 3, ...$. Note it only takes integers or more accurately natural numbers. This distribution is thus called a discrete distribution which means its function is a p.m.f.
+
+The parameter $\lambda$ is the expected number of events. In this context it is the mean number of loyalty signups per shift. The output for this function is the probability of me obtaining $x$ amount of loyalty cards.
+
+A Poisson process is written as $Y \sim Poisson(t\lambda)$ and it has p.m.f:
 
 $$
 p(x) = \frac{e^{-t\lambda}(t\lambda)^{x}}{x!}
 $$
 
-The variable x takes values $0, 1, 2, 3, ...$. Note it only takes integers or more accurately natural numbers. This distribution is thus called a discrete distribution which means its function is a p.m.f.
+The variable x takes values $0, 1, 2, 3, ...$.
+
+Here it takes an extra parameter which is time. Here we are going to define time as number of shifts. So the Poisson process for $5$ shifts is given by $Y \sim Poisson(5\lambda)$. Time can also be numbers such as half an hour or $50$ seconds but we will not discuss this any further.
+
+From my initial analysis $\lambda = 3.54$. Hence our distribution is $Y \sim Poisson(3.54)$. Here $t = 1$ as we are just talking about the probability distribution for each single shift. A table of probabilities for each number of loyalty card signups in a shift are given below:
+
+<img width="588" height="365" alt="Screenshot From 2026-11-25 15-07-48" src="https://github.com/user-attachments/assets/304f0f91-be12-4c59-a54d-cc1c18871b7e" />
+
+### The Geometric distribution
+
