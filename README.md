@@ -143,9 +143,9 @@ For both distributions they contain only one categorical variable. The number of
 
 So starting with the distribution $Y \sim Poisson(3.54)$, our null and alternative hypotheses are:
 
-$H_0$ : The data collected for the number of loyalty sign ups comes from a $Y \sim Poisson(3.54)$ distribution.
+$H_0$: The data collected for the number of loyalty sign ups comes from a $Y \sim Poisson(3.54)$ distribution.
 
-$H_1$ The data collected for the number of loyalty sign ups does not come from a $Y \sim Poisson(3.54)$ distribution.
+$H_1$: The data collected for the number of loyalty sign ups does not come from a $Y \sim Poisson(3.54)$ distribution.
 
 respectively.
 
@@ -154,3 +154,31 @@ We will use a p-value threshold of $0.1$ meaning that we will reject H0 if the p
 Now the test statistic was approximately $1.4082$ and its p-value was approximately $0.8428$.
 
 From this we can say that we do not reject the null hypothesis at the 10% significance level. Therefore, since the p-value is so large we can say there is little or no evidence against the null hypothesis.
+
+As for the geometric distribution
+
+$$
+Y \sim G_1\left(\frac{177}{1480}\right)
+$$
+
+Are null and alternative hypotheses are:
+$H_0$: The data collected for the number of loyalty sign ups comes from a 
+$$
+Y \sim G_1\left(\frac{177}{1480}\right)
+$$
+distribution.
+$H_1$: The data collected for the number of loyalty sign ups does not come from a 
+$$
+Y \sim G_1\left(\frac{177}{1480}\right)
+$$
+distribution 
+
+respectively. Again, we will use a p-value threshold of 0.1.
+
+Now the test statistic was approximately 5.6125 and its p-value was approximately 0.9918.
+
+From this we can say that we do not reject the null hypothesis at the 10% significance level. Therefore, since the p-value is so large we can say there is little or no evidence against the null hypothesis.
+
+## The theory behind my new proposed model
+
+
