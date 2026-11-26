@@ -38,5 +38,32 @@ I also work 5.5 hour shifts. A bar plot for the number of loyalty cards handed o
 
 <img width="757" height="570" alt="Screenshot From 2026-11-25 14-31-01" src="https://github.com/user-attachments/assets/410dd545-dbff-4164-b6b4-89b163331226" />
 
-Moving on to waiting times the histogram for this is shown below for 177 data
-values: $\mu_4 \approx 8.36$, $\sigma^{2}_4 \approx 51.43$, $\sigma \approx 7.17$, $M_4 = 6.0$, and $R_4 = 8.0$. This histogram has a single mode at (approximately) the $1$ to $5$ bin. It can be argued that this is bimodal with the second mode being at (approximately) the $18$ to $22$ bin. This histogram has a decreasing trend which suggests fitting it to a geometric distribution would be a good idea. This will also be discussed shortly.
+Moving on to waiting times the histogram for this is shown above for 177 data values: $\mu_4 \approx 8.36$, $\sigma^{2}_4 \approx 51.43$, $\sigma \approx 7.17$, $M_4 = 6.0$, and $R_4 = 8.0$. This histogram has a single mode at (approximately) the $1$ to $5$ bin. It can be argued that this is bimodal with the second mode being at (approximately) the $18$ to $22$ bin. This histogram has a decreasing trend which suggests fitting it to a geometric distribution would be a good idea. This will also be discussed shortly.
+
+## Fitting my first models
+
+### The Poisson process
+
+We can define something called a Poisson process. The assumptions for this are as follows:
+1. The mean and variance are approximately even.
+2. Events are independent. For this situation it means one person saying yes or no to a loyalty card does not affect another's.
+3. The rate of occurrence of each event is constant. That is the rate of loyalty signups is constant.
+4. Events occur singly. Two people cannot sign up to a loyalty card at the same time.
+
+For both shifts $\mu_3 \approx 3.54$ and $\sigma^{2}_3 ≈ 3.37$. These values are close together so the first assumption seems to be met.
+
+As for the second it is much more difficult to determine. It could be said that the events are not independent as one person saying yes or no to a loyalty card affects another. After all humans are social animals. I would however argue against this as if someone generally wanted a loyalty card would say yes even if the person in front answered no and vice-versa. I had this happen many times in the collection of this data. A main concern about independence is the fact that family members or friendship groups who come to the till separately would answer differently. This was overcome by asking only one person in this family or friend from the group.
+
+For the third assumption this may not be met. Through my collection of data there were certain days where I constantly got loads of signups and some where I got little. An example of this is when I worked on Easter Sunday where I only got $1$. It is worth mentioning though that not enough data has been collected to verify this claim. That aside it seems the more people that you have to ask the more you are likely to get. This can change especially around the Christmas period. We will return to these points later. A different model will be given were we can take this into account.
+
+Finally for the last assumption since I can only serve one customer at a time I could only sign up at most one person. This assumption is certainly met.
+
+So assumptions $1$, $2$, and $4$ seem to be met but not $3$. We will ignore this for the time being.
+
+The Poisson distribution is written as $Y \sim Poisson(t\lambda)$ and it has probability mass function (pmf):
+
+$$
+p(x) = \frac{e^{-t\lambda}(t\lambda)^{x}}{x!}
+$$
+
+The variable x takes values $0, 1, 2, 3, ...$. Note it only takes integers or more accurately natural numbers. This distribution is thus called a discrete distribution which means its function is a p.m.f.
