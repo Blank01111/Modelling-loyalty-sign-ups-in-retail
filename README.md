@@ -181,4 +181,17 @@ From this we can say that we do not reject the null hypothesis at the 10% signif
 
 ## The theory behind my new proposed model
 
+### The non-homogeneous Poisson process
+
+The inspiration for this model comes from a Poisson process that is called The non-homogeneous Poisson process. Essentially this is a Poisson process that has changing value for \lambda. It is written as $Y \sim Poisson(\mu(t))$ where:
+
+$$
+\mu(t) = \int_0^t \lambda(u) du
+$$
+
+Essentially you integrate this function with limits $0$ and the specified time $t$ then you will get the expected value or $\lambda$. From this you can calculate the probability of each event $y$ using:
+
+$$
+f(y) = \frac{e^{\lambda}(\lambda^{y})}{y!}
+$$
 
