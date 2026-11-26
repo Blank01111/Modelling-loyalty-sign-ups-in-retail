@@ -123,4 +123,34 @@ $$
 p = \frac{177}{1480}
 $$
 
-Hence our distribution is $Y \sim G_1\left(\frac{177}{1480}\right)$
+Hence our distribution is 
+
+$$
+Y \sim G_1\left(\frac{177}{1480}\right)
+$$
+
+## Checking the validity of our models
+
+For both of these distributions I ran a \chi^2 goodness-of-fit-test. In simple terms this test takes the actual data collected and compares it to the expected number of values it should have if it came from the stated distribution.
+
+It makes the following assumptions:
+1. The data consists of one categorical variable.
+2. The observations of the data are independent.
+3. The groups of the variable must be mutually exclusive.
+4. The expected frequency is greater than 5 in each category.
+
+For both distributions they contain only one categorical variable. The number of loyalty sign-ups for the Poisson distribution and the waiting time for a loyalty sign up for the geometric distribution. Here these variables are mutually exclusive that is they can’t happen at the same time. For example, I can’t sign up 3 people in total in a shift and sign up 4 people in total in the same shift. Thus assumptions 1 and 3 hold. As discussed previously for both distributions assumption 2 holds. Finally, I made assumption 4 hold by combining groups.
+
+So starting with the distribution $Y \sim Poisson(3.54)$, our null and alternative hypotheses are:
+
+$H_0$ : The data collected for the number of loyalty sign ups comes from a $Y \sim Poisson(3.54)$ distribution.
+
+$H_1$ The data collected for the number of loyalty sign ups does not come from a $Y \sim Poisson(3.54)$ distribution.
+
+respectively.
+
+We will use a p-value threshold of $0.1$ meaning that we will reject H0 if the p-value is less than $0.1$. That is if H0 has probability of less than $0.1$ of being true. The most common thresholds are $0.01$, $0.05$ and $0.1$.
+
+Now the test statistic was approximately $1.4082$ and its p-value was approximately $0.8428$.
+
+From this we can say that we do not reject the null hypothesis at the 10% significance level. Therefore, since the p-value is so large we can say there is little or no evidence against the null hypothesis.
