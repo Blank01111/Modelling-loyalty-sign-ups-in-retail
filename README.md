@@ -342,3 +342,26 @@ $$
 $$
 Y_{DEC} ~ N(\mu_{DEC}, \sigma^{2}_{DEC})
 $$
+
+Now by assumption $1$ each day follows a Poisson distribution. Here, we define that Poisson distribution to be $X \sim Poisson(\Pi(Y_n))$ Where $\Pi(Y_n)$ is the mean of the value for each day after the next iteration of the random walk takes place and $n = 1, 2, 3, 4, \dots, 365$. Now this must be the mean and all we have is a way to model the number of people available to ask each day. To get the mean we can argue that each day we ask a certain amount of people to ask each who will say yes at a constant probability by assumption 7. Each person asked follows a Bernoulli process and a chain of them is defined to be a Binomial distribution. That is
+
+$$
+\Pi(Y_n) \sim B(n, p)
+$$
+
+where $n$ here is the number of people who will be asked and $p$ is the probability they will say yes.
+
+The mean of this distribution is just $n \times p$.
+
+The value we will use for p will be the one obtained for the geometric distribution
+namely
+
+$$
+\frac{177}{1480}
+$$
+
+Therefore our mean for each day is just:
+
+$\frac{177}{1480} \times$ the number of customers available to ask in the given day.
+This will be calculated each day for each month throughout the year. 
+
