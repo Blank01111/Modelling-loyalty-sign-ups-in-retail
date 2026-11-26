@@ -260,4 +260,27 @@ $$
 
 where $y$ is the number of successes out of $n$ trials.
 
+## My new proposed model
+
+Now, if we go back to the assumptions of the Poisson distribution, I noted that the rate of loyalty sign ups is constant may not be met. Here I will propose a model that overcomes this limitation.
+
+The assumptions of the model are:
+1. The number of loyalty sign ups per day comes from a Poisson distribution.
+2. Any number of loyalty sign ups is possible.
+3. This is a model of one person asking people every day in a year.
+4. The number of people to ask is infinite.
+5. The number of people coming in is random.
+6. The number of customers to ask has a direct effect on the number of
+loyalty sign ups in that day.
+7. The probability of someone asked if they would like a loyalty card to say
+yes is constant throughout the year.
+8. People who already have a loyalty card are ignored.
+
+It is worth noting that the number of customers to ask is discrete data whilst the normal distribution deals with continuous data. By assumption $4$ though this doesn’t matter as we can treat large quantities of discrete data that can take any value randomly in a range as continuous.
+
+Now each day there is random fluctuation of people who come in. One day two more people could be available to ask or five less. The lowest amount of people is $0$ in a day and the highest would go up to infinity. This changes each day with certain probabilities for each movement. The range for the number of people is large despite it being impossible that less than $0$ people can come in as the
+mean number of people from my analysis who were asked was $29$. Thus, we could use a normal probability function for the change in the number of people who come in. Now the variation of people who are available to be asked is not constant throughout the year. For example, the probability of having $10$ extra people to ask during the Christmas period is a lot higher than the amount in May or Easter Sunday. We then need different normal distributions for different periods. We could modify each normal distribution to suit different times. We can use the mean and standard deviation defined for each p.d.f to our advantage. To make it more likely to have more people in each day we could define a high mean at $5$ say making this the most likely value to be added to the people in the
+day before. Another thing we can do is if the amount of people who could come in varies a lot over a period changes a lot we can give the normal distribution defined for it a higher standard deviation.
+
+How will we define the periods to use different normal distributions though? there are many ways to do this but the one I will talk about and simulate later is a monthly period. That is a different normal distribution for each month. So, we will have:
 
