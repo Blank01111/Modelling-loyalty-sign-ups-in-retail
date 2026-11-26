@@ -1,4 +1,4 @@
-# Modelling-loyalty-sign-ups-in-retail
+# Modelling loyalty sign ups in retail
 
 ## Introduction
 
@@ -194,4 +194,19 @@ Essentially you integrate this function with limits $0$ and the specified time $
 $$
 f(y) = \frac{e^{\lambda}(\lambda^{y})}{y!}
 $$
+
+### The random walk
+
+The second theory I would like to introduce is a random walk. Imagine now you are going down a path that has multiple turnings to the left and right which you must choose which one to take. Suppose further that you decide to go left or right at each point depending on the flip of a coin. You will go right if it comes up heads or left if it comes up tails. This is a rather weird description, but it
+shows the basics of a random walk. We can see from this that the probability you will go left is $0.5$ and right is also $0.5$. You could take $2$ rights $1$ left or $5$ lefts and no rights.
+
+We can extend this by imagining a particle that moves left or right based the probability table below:
+
+<img width="398" height="170" alt="Screenshot From 2026-11-25 15-43-33" src="https://github.com/user-attachments/assets/4d2fa1cc-4aea-4f5b-8ffb-bf0de24572e1" />
+
+Here the particle can stay where it is at a probability of $0.5$ and move left or right depending on the other probabilities.
+
+A diagram showing how this random walk takes place with the first step $n = 0$ being at $0$ and the steps up to $n = 3$ is shown below:
+
+<img width="521" height="444" alt="random_walk" src="https://github.com/user-attachments/assets/03dac546-6285-425f-bbab-24a6284ec783" />
 
