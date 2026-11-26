@@ -247,3 +247,17 @@ The graph of the standard normal distribution I made with maxima is shown below.
 <img width="547" height="385" alt="standard_normal" src="https://github.com/user-attachments/assets/e3a5e050-145d-44fe-a423-b61b1e3dfb06" />
 
 Changing the mean shifts the graph left if it is negative or right if it is positive. The larger the standard deviation the more spread out the graph becomes.
+
+### The Binomial distribution
+
+Finally, I will briefly mention the binomial distribution. We write $Y \sim B(n, p)$.
+
+This distribution comes from a series of $n$ Bernoulli trials with constant probability $p$. Its p.m.f is given by
+
+$$
+f(y) = \frac{n!}{y!(n-y)!}p^{y}(1-p)^{n-y}
+$$
+
+where $y$ is the number of successes out of $n$ trials.
+
+
