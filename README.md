@@ -284,3 +284,61 @@ day before. Another thing we can do is if the amount of people who could come in
 
 How will we define the periods to use different normal distributions though? there are many ways to do this but the one I will talk about and simulate later is a monthly period. That is a different normal distribution for each month. So, we will have:
 
+$$
+Y_JAN ~ N(\mu_JAN, \sigma^{2}_JAN)
+$$
+
+
+$$
+Y_FEB ~ N(\mu_FEB, \sigma^{2}_FEB)
+$$
+
+
+$$
+Y_MAR ~ N(\mu_MAR, \sigma^{2}_MAR)
+$$
+
+
+$$
+Y_APR ~ N(\mu_APR, \sigma^{2}_APR)
+$$
+
+
+$$
+Y_MAY ~ N(\mu_MAY, \sigma^{2}_MAY)
+$$
+
+
+$$
+Y_JUN ~ N(\mu_JUN, \sigma^{2}_JUN)
+$$
+
+
+$$
+Y_JUL ~ N(\mu_JUL, \sigma^{2}_JUL)
+$$
+
+
+$$
+Y_AUG ~ N(\mu_AUG, \sigma^{2}_AUG)
+$$
+
+
+$$
+Y_SEP ~ N(\mu_SEP, \sigma^{2}_SEP)
+$$
+
+
+$$
+Y_OCT ~ N(\mu_OCT, \sigma^{2}_OCT)
+$$
+
+
+$$
+Y_NOV ~ N(\mu_NOV, \sigma^{2}_NOV)
+$$
+
+
+$$
+Y_DEC ~ N(\mu_DEC, \sigma^{2}_DEC)
+$$
