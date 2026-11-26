@@ -379,3 +379,13 @@ Note the number of days given for December is 30. The reason for this is the sto
 ## Conclusion
 
 From the moment after my meeting with my manager I have set out on my quest to model the number of loyalty card sign ups in the best way I can learning and applying new things at each step. It is worth though echoing the words from the Statistician George Box: ”All models are wrong, but some are useful.” I hope this model is useful. I would also like to say that I have thoroughly enjoyed working on every stage of this project. Probability is a very useful and fascinating subject that has many applications some of which might surprise you. It is a very hard subject though and one I do not think anyone can say they fully understand without lying.
+
+## References
+
+The Open University (2017). *M248 Analysing data, Book A*, The Open University, Mylton Keynes. **3** 265–331.
+
+The Open University (2017). *M248 Analysing data, Book B*, The Open University, Mylton Keynes. **4** 273–332.
+
+The Open University (2022). *M343 Applications of probability, Book 2, Modelling events in time and space*, 2nd ed, The Open University, Mylton Keynes. **5** 42–54.
+
+The Open University (2022). *M343 Applications of probability, Book 3, Discrete-time random processes*, 2nd ed, The Open University, Mylton Keynes. **6** 43–88
