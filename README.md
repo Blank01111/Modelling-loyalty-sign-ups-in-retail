@@ -365,3 +365,17 @@ Therefore our mean for each day is just:
 $\frac{177}{1480} \times$ the number of customers available to ask in the given day.
 This will be calculated each day for each month throughout the year. 
 
+## My simulation for this model
+
+The simulation was done in python. The code is shown below.
+
+<img width="1018" height="641" alt="Screenshot From 2026-11-26 13-13-36" src="https://github.com/user-attachments/assets/62b6aa2a-b832-484e-b5c6-654b306c5b0e" />
+
+
+<img width="1018" height="878" alt="Screenshot From 2026-11-26 13-13-49" src="https://github.com/user-attachments/assets/e736d605-3838-499e-84b6-10ba53dabc99" />
+
+Note the number of days given for December is 30. The reason for this is the store is not open Christmas Day.
+
+## Conclusion
+
+From the moment after my meeting with my manager I have set out on my quest to model the number of loyalty card sign ups in the best way I can learning and applying new things at each step. It is worth though echoing the words from the Statistician George Box: ”All models are wrong, but some are useful.” I hope this model is useful. I would also like to say that I have thoroughly enjoyed working on every stage of this project. Probability is a very useful and fascinating subject that has many applications some of which might surprise you. It is a very hard subject though and one I do not think anyone can say they fully understand without lying.
