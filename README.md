@@ -60,17 +60,19 @@ Finally for the last assumption since I can only serve one customer at a time I 
 
 So assumptions $1$, $2$, and $4$ seem to be met but not $3$. We will ignore this for the time being.
 
-The Poisson distribution is written as $Y \sim Poisson(\lambda)$ and it has probability mass function (p.m.f):
+The Poisson distribution is written as $Y \sim Poisson(\lambda)$ and it has probability mass function (p.m.f)
 
 $$
 f(x) = \frac{e^{\lambda}(\lambda)^{y}}{y!}
 $$
 
+where $e$ is the exponential function.
+
 The variable $y$ takes values $0, 1, 2, 3, \ldots$. Note it only takes integers or more accurately natural numbers. This distribution is thus called a discrete distribution which means its function is a p.m.f.
 
 The parameter $\lambda$ is the expected number of events. In this context it is the mean number of loyalty signups per shift. The output for this function is the probability of me obtaining $y$ amount of loyalty cards.
 
-A Poisson process is written as $Y \sim Poisson(t\lambda)$ and it has p.m.f:
+A Poisson process is written as $Y \sim Poisson(t\lambda)$ and it has p.m.f
 
 $$
 f(y) = \frac{e^{-t\lambda}(t\lambda)^{y}}{y!}
@@ -80,7 +82,7 @@ The variable $y$ takes values $0, 1, 2, 3, \ldots$.
 
 Here it takes an extra parameter which is time. Here we are going to define time as number of shifts. So the Poisson process for $5$ shifts is given by $Y \sim Poisson(5\lambda)$. Time can also be numbers such as half an hour or $50$ seconds but we will not discuss this any further.
 
-From my initial analysis $\lambda = 3.54$. Hence our distribution is $Y \sim Poisson(3.54)$. Here $t = 1$ as we are just talking about the probability distribution for each single shift. A table of probabilities for each number of loyalty card signups in a shift are given below:
+From my initial analysis $\lambda = 3.54$. Hence our distribution is $Y \sim Poisson(3.54)$. Here $t = 1$ as we are just talking about the probability distribution for each single shift. A table of probabilities for each number of loyalty card signups in a shift are given below.
 
 <img width="588" height="365" alt="Screenshot From 2026-11-25 15-07-48" src="https://github.com/user-attachments/assets/304f0f91-be12-4c59-a54d-cc1c18871b7e" />
 
@@ -88,7 +90,7 @@ From my initial analysis $\lambda = 3.54$. Hence our distribution is $Y \sim Poi
 
 We will now move on to waiting times for a loyalty sign up which we will model them using a Geometric distribution.
 
-The Geometric Distribution is derived as the waiting time for $1, 2, 3, 4, 5, \ldots$ Bernoulli trial events until a ”success”. A Bernoulli trial is defined to be:
+The Geometric Distribution is derived as the waiting time for $1, 2, 3, 4, 5, \ldots$ Bernoulli trial events until a ”success”. A Bernoulli trial is defined to be
 
 $$
 f(y) = p(1-p)^{1-y}
@@ -103,7 +105,7 @@ It has the following assumptions:
 
 Again, I would say that the first assumption is true with the same reason I gave when talking about the Poisson process. I also see no reason why the second assumption does not hold. After all I can’t control who comes to the till next. They could very well say yes or no at a constant rate. I would say this assumption is then reasonable. Since I discounted anyone who already had a loyalty card assumption $3$ certainly holds.
 
-The Geometric distribution is written as $Y \sim G_1(p)$ and it has p.m.f function:
+The Geometric distribution is written as $Y \sim G_1(p)$ and it has p.m.f function
 
 $$
 f(y) = p(1-p)^{y-1}
@@ -111,7 +113,7 @@ $$
 
 The variable $y$ takes values $1, 2, 3, \ldots$. Again we can say this is a discrete distribution.
 
-Here p is the probability of getting a loyalty sign up from the next person asked. How do we calculate p though? It can be shown (but I will not do so here) that p is the reciprocal of the mean for all the waiting times. Well from my initial analysis:
+Here p is the probability of getting a loyalty sign up from the next person asked. How do we calculate p though? It can be shown (but I will not do so here) that p is the reciprocal of the mean for all the waiting times. Well from my initial analysis
 
 $$
 \mu_4 = \frac{1480}{177}
@@ -141,7 +143,7 @@ It makes the following assumptions:
 
 For both distributions they contain only one categorical variable. The number of loyalty sign-ups for the Poisson distribution and the waiting time for a loyalty sign up for the geometric distribution. Here these variables are mutually exclusive that is they can’t happen at the same time. For example, I can’t sign up 3 people in total in a shift and sign up 4 people in total in the same shift. Thus assumptions 1 and 3 hold. As discussed previously for both distributions assumption 2 holds. Finally, I made assumption 4 hold by combining groups.
 
-So starting with the distribution $Y \sim Poisson(3.54)$, our null and alternative hypotheses are:
+So starting with the distribution $Y \sim Poisson(3.54)$, our null and alternative hypotheses are
 
 $H_0$: The data collected for the number of loyalty sign ups comes from a $Y \sim Poisson(3.54)$ distribution.
 
@@ -161,12 +163,14 @@ $$
 Y \sim G_1\left(\frac{177}{1480}\right)
 $$
 
-Are null and alternative hypotheses are:
+Are null and alternative hypotheses are
+
 $H_0$: The data collected for the number of loyalty sign ups comes from a 
 $$
 Y \sim G_1\left(\frac{177}{1480}\right)
 $$
 distribution.
+
 $H_1$: The data collected for the number of loyalty sign ups does not come from a 
 $$
 Y \sim G_1\left(\frac{177}{1480}\right)
@@ -183,13 +187,13 @@ From this we can say that we do not reject the null hypothesis at the 10% signif
 
 ### The non-homogeneous Poisson process
 
-The inspiration for this model comes from a Poisson process that is called The non-homogeneous Poisson process. Essentially this is a Poisson process that has changing value for \lambda. It is written as $Y \sim Poisson(\mu(t))$ where:
+The inspiration for this model comes from a Poisson process that is called The non-homogeneous Poisson process. Essentially this is a Poisson process that has changing value for \lambda. It is written as $Y \sim Poisson(\mu(t))$ where
 
 $$
 \mu(t) = \int_0^t \lambda(u) du
 $$
 
-Essentially you integrate this function with limits $0$ and the specified time $t$ then you will get the expected value or $\lambda$. From this you can calculate the probability of each event $y$ using:
+Essentially you integrate this function with limits $0$ and the specified time $t$ then you will get the expected value or $\lambda$. From this you can calculate the probability of each event $y$ using
 
 $$
 f(y) = \frac{e^{\lambda}(\lambda^{y})}{y!}
@@ -200,13 +204,46 @@ $$
 The second theory I would like to introduce is a random walk. Imagine now you are going down a path that has multiple turnings to the left and right which you must choose which one to take. Suppose further that you decide to go left or right at each point depending on the flip of a coin. You will go right if it comes up heads or left if it comes up tails. This is a rather weird description, but it
 shows the basics of a random walk. We can see from this that the probability you will go left is $0.5$ and right is also $0.5$. You could take $2$ rights $1$ left or $5$ lefts and no rights.
 
-We can extend this by imagining a particle that moves left or right based the probability table below:
+We can extend this by imagining a particle that moves left or right based the probability table below.
 
 <img width="398" height="170" alt="Screenshot From 2026-11-25 15-43-33" src="https://github.com/user-attachments/assets/4d2fa1cc-4aea-4f5b-8ffb-bf0de24572e1" />
 
 Here the particle can stay where it is at a probability of $0.5$ and move left or right depending on the other probabilities.
 
-A diagram showing how this random walk takes place with the first step $n = 0$ being at $0$ and the steps up to $n = 3$ is shown below:
+A diagram showing how this random walk takes place with the first step $n = 0$ being at $0$ and the steps up to $n = 3$ is shown below.
 
 <img width="521" height="444" alt="random_walk" src="https://github.com/user-attachments/assets/03dac546-6285-425f-bbab-24a6284ec783" />
 
+### The normal distribution
+
+Now the probabilities that determine the movement can be a random function like the Poisson function I have talked about. The new proposed model will use the normal distribution which is a continuous function meaning it can take any value (including decimals) between a fixed range which for this distribution is $-\infty$ to $\infty$. Since it is continuous it has a probability density function (p.d.f):
+
+$$
+f(y) = \frac{1}{\sqrt{2\pi}\sigma}exp\left(\frac{(y - \mu)^{2}}{2\sigma^{2}}\right)
+$$
+
+where $\mu$ is the mean of the distribution, $\sigma$ is its standard deviation,  $\sigma^2$ is its variance, and $exp$ is the exponential function.
+
+The normal distribution is written as $Y \sim N(\mu, \sigma^{2})$.
+
+The probability of x taking values between $1.5$ and $3$ say is given by
+
+$$
+f(y) = \int_{1.5}^3 \frac{1}{\sqrt{2\pi}\sigma}exp\left(\frac{(y - \mu)^{2}}{2\sigma^{2}}\right)
+$$
+
+It would be impractical to calculate this integral each time we want a specific range over and over. Instead, we convert the values we want to the standard normal distribution which is defined to be $Y \sim N(0, 1)$.
+
+This is done using:
+
+$$
+z = \frac{y - \mu}{\sigma}
+$$
+
+where $z$ is the corresponding value for the standard normal distribution. We then use tables for the standard normal distribution to get the required probability but the details will not be given here.
+
+The graph of the standard normal distribution I made with maxima is shown below.
+
+<img width="547" height="385" alt="standard_normal" src="https://github.com/user-attachments/assets/e3a5e050-145d-44fe-a423-b61b1e3dfb06" />
+
+Changing the mean shifts the graph left if it is negative or right if it is positive. The larger the standard deviation the more spread out the graph becomes.
