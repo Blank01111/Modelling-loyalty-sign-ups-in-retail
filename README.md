@@ -63,20 +63,20 @@ So assumptions $1$, $2$, and $4$ seem to be met but not $3$. We will ignore this
 The Poisson distribution is written as $Y \sim Poisson(\lambda)$ and it has probability mass function (p.m.f):
 
 $$
-p(x) = \frac{e^{\lambda}(\lambda)^{x}}{x!}
+f(x) = \frac{e^{\lambda}(\lambda)^{y}}{y!}
 $$
 
-The variable x takes values $0, 1, 2, 3, ...$. Note it only takes integers or more accurately natural numbers. This distribution is thus called a discrete distribution which means its function is a p.m.f.
+The variable $y$ takes values $0, 1, 2, 3, \ldots$. Note it only takes integers or more accurately natural numbers. This distribution is thus called a discrete distribution which means its function is a p.m.f.
 
-The parameter $\lambda$ is the expected number of events. In this context it is the mean number of loyalty signups per shift. The output for this function is the probability of me obtaining $x$ amount of loyalty cards.
+The parameter $\lambda$ is the expected number of events. In this context it is the mean number of loyalty signups per shift. The output for this function is the probability of me obtaining $y$ amount of loyalty cards.
 
 A Poisson process is written as $Y \sim Poisson(t\lambda)$ and it has p.m.f:
 
 $$
-p(x) = \frac{e^{-t\lambda}(t\lambda)^{x}}{x!}
+f(y) = \frac{e^{-t\lambda}(t\lambda)^{y}}{y!}
 $$
 
-The variable x takes values $0, 1, 2, 3, ...$.
+The variable $y$ takes values $0, 1, 2, 3, \ldots$.
 
 Here it takes an extra parameter which is time. Here we are going to define time as number of shifts. So the Poisson process for $5$ shifts is given by $Y \sim Poisson(5\lambda)$. Time can also be numbers such as half an hour or $50$ seconds but we will not discuss this any further.
 
@@ -86,3 +86,41 @@ From my initial analysis $\lambda = 3.54$. Hence our distribution is $Y \sim Poi
 
 ### The Geometric distribution
 
+We will now move on to waiting times for a loyalty sign up which we will model them using a Geometric distribution.
+
+The Geometric Distribution is derived as the waiting time for $1, 2, 3, 4, 5, \ldots$ Bernoulli trial events until a ”success”. A Bernoulli trial is defined to be:
+
+$$
+f(y) = p(1-p)^{1-y}
+$$
+
+for $y = 0, 1$ where $1$ is a success with probability $p$ and $0$ a failure with probability $1 − p$. Here a success is someone saying yes to a loyalty card and a failure is someone saying no.
+
+It has the following assumptions:
+1. Events are independent. For this situation it means one person saying yes or no to a loyalty card does not affect another's.
+2. The probability of a success is constant. That is the probability the next person says yes to a loyalty card is constant throughout.
+3. Each trial has only two possible outcomes a success (they say yes to a loyalty card) or a failure (they say no).
+
+Again, I would say that the first assumption is true with the same reason I gave when talking about the Poisson process. I also see no reason why the second assumption does not hold. After all I can’t control who comes to the till next. They could very well say yes or no at a constant rate. I would say this assumption is then reasonable. Since I discounted anyone who already had a loyalty card assumption $3$ certainly holds.
+
+The Geometric distribution is written as $Y \sim G_1(p)$ and it has p.m.f function:
+
+$$
+f(y) = p(1-p)^{y-1}
+$$
+
+The variable $y$ takes values $1, 2, 3, \ldots$. Again we can say this is a discrete distribution.
+
+Here p is the probability of getting a loyalty sign up from the next person asked. How do we calculate p though? It can be shown (but I will not do so here) that p is the reciprocal of the mean for all the waiting times. Well from my initial analysis:
+
+$$
+\mu_4 = \frac{1480}{177}
+$$
+
+so,
+
+$$
+p = \frac{177}{1480}
+$$
+
+Hence our distribution is $Y \sim G_1\left(\frac{177}{1480}\right)$
